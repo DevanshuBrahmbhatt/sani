@@ -11,10 +11,11 @@ echo '
 
 <div class="container">
 
-<h3>Undeliver Orders<br> </h3>
-<table>
+<blockquote><h3>Deliver Orders<br> </h3></blockquote>
+<table class="striped">
 <thead>
   <tr>
+    <th>ID</th>
       <th>Name</th>
       <th>Phone No</th>
       <th>Address</th>
@@ -32,6 +33,7 @@ if($dataProduct!=null){
 
 echo "<tbody> ";
   echo "<tr>";
+  echo"   <td> " .$c['id'].  " </td>";
  echo"   <td> " .$c['name'].  " </td>";
  echo" <td> " .$c['phoneno'].  " </td>";
  echo"<td>  " .$c['address'].  " </td>";

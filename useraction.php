@@ -41,6 +41,8 @@ $_SESSION['user_no']=$user_no;
 
   if ($conn->query($sql) == TRUE) {
 
+  
+
 
     include_once('navbar.php');
 
@@ -53,6 +55,8 @@ $_SESSION['user_no']=$user_no;
 <br>
 
 <h3 class="center">Check out page</h3>
+
+
 <div class="container">
 
 
@@ -83,7 +87,7 @@ $_SESSION['user_no']=$user_no;
       <div class="row">
 
       <div class="input-field col s12">
-  <input placeholder="Enter Address"  value=' .  $address . '   id="address" type="text" name="address" class="validate" readonly>
+  <input placeholder="Enter Address"  value=' .  $address . '   id="address" type="text" name="address"  readonly>
   <label for="address">Address</label>
 
   
@@ -139,7 +143,7 @@ $_SESSION['user_no']=$user_no;
 </div>
 
 <div class="input-field col s6">
-<input placeholder="area" value=' .  $area . ' id="area"  type="number" name="area" class="validate" readonly>
+<input placeholder="area" value=' .  $area . ' id="area"  type="text" name="area" class="validate" readonly>
 <label for="phone">Area</label>
 </div>
 
@@ -162,13 +166,14 @@ $_SESSION['user_no']=$user_no;
 
 <div class="input-field col s6">
 
-
-      <input id="ORDER_ID" tabindex="1"  value=' .  "ORDS" . rand(10000, 99999999) . ' maxlength="20" size="20" name="ORDER_ID" readonly>
-      <label for="orderid">OrderID</label>
+      <input placeholder="OrderID"  id="ORDER_ID" tabindex="1"  value=' .  "ORDS" . rand(10000, 99999999) . ' maxlength="20" size="20" name="ORDER_ID" readonly>
+      
+<label class="active" for="orderid">OrderID</label>
+      
 
   </div>
 
-  <di v class="input-field col s6">
+  <div class="input-field col s6">
   
   <input title="TXN_AMOUNT" tabindex="10"
     type="text"  value=' . $noof * 70 . ' name="TXN_AMOUNT" readonly>
@@ -192,9 +197,13 @@ $_SESSION['user_no']=$user_no;
           
             
       
+<div class="row">
+<div class="input-field col s12">
+  
 
-<button class="btn btn-wave" type="submit" name="submit">Checkout</button>
-
+<button class="btn btn-wave pink" id="submit" type="submit" name="submit">Checkout</button>
+</div>
+</div>
 </div>
 
 
@@ -204,7 +213,11 @@ $_SESSION['user_no']=$user_no;
     </form>
   </div>
 
+<script>
 
+
+// document.getElementById("submit").disabled = true;
+</script>
 
 </div> 
 

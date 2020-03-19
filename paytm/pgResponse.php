@@ -36,16 +36,16 @@ if($isValidChecksum == "TRUE") {
 $sql="update sani set payment='1' where user_no= '" . $_SESSION['user_no'] . "' ";
 
 
-echo $sql;
+// echo $sql;
 
 
 if ($conn->query($sql) == TRUE) {
 
 
-	// session_unset(); 
-	// session_destroy();
+	 session_unset(); 
+	 session_destroy();
 	echo "sucees";
-	// header("location:'Thankyou.php' ");
+	 header("location:../Thankyou.php ");
 
 
 }

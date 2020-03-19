@@ -2,12 +2,8 @@
 
     <!-- Compiled and minified JavaScript -->
 
-    <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
     
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-            
-    
-<footer class="page-footer">
+<footer class="page-footer blue darken-4">
           <div class="container">
             <div class="row">
               <div class="col l6 s12">
@@ -19,6 +15,10 @@
                 <ul>
                 <li><a href="t&C.php" class="white-text">T&C</a></li>
         <li><a href="about.php" class="white-text" >About Us</a></li>
+        <li><a href="volunter.php"  class="white-text" >Voluntary support </a></li>
+        <li><a href="feedback.php"  class="white-text" >Feedback</a></li>
+        
+
                                </ul>
               </div>
             </div>

@@ -15,6 +15,7 @@ echo '
 <table class="striped">
 <thead>
   <tr>
+      <th>ID</th>
       <th>Name</th>
       <th>Phone No</th>
       <th>Address</th>
@@ -32,6 +33,7 @@ if($dataProduct!=null){
 
 echo "<tbody> ";
   echo "<tr>";
+  echo"   <td> " .$c['id'].  " </td>";
  echo"   <td> " .$c['name'].  " </td>";
  echo" <td> " .$c['phoneno'].  " </td>";
  echo"<td>  " .$c['address'].  " </td>";

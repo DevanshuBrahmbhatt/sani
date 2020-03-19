@@ -38,7 +38,7 @@ echo "<tbody> ";
  echo"<td>  " .$c['address'].  " </td>";
  echo"<td>  " .$c['payment'].  " </td>";
  echo"<td>  " .$c['delivery'].  " </td>";
- echo "<td>     <a href= 'getpro.php?user_no=$c[user_no]   '   class='btn btn-wave'>Update</a> </td> "  ;
+ echo "<td>     <a href= 'getpro.php?user_no=$c[user_no]   '   class='btn btn-wave pink'>Update</a> </td> "  ;
 	
  echo"</tr>";
   

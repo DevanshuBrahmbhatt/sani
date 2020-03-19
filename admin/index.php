@@ -19,7 +19,7 @@ include_once('navbar.php');
         
             <div class="container-fluid">
 
-            <h3  id="heading"  class="center" style="color:#e85a50"> <U><br>Log In For Admin</U> </h3>
+            <h3  id="heading"  class="center" style="color:black"> <U><br>Log In For Admin</U> </h3>
         </div>
         
         
@@ -48,7 +48,7 @@ include_once('navbar.php');
 <div class="row">
 
 <div class="input-field col s6 ">
-    <button class="btn #d84315 deep-orange darken-3"  type="submit"
+    <button class="btn pink"  type="submit"
     class="black-text text-black" id="postsubmit"  name="submit">Log In
     <i class="material-icons right">send</i>
     </button>
