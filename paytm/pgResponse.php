@@ -2,7 +2,7 @@
 
 session_start();
 
-echo $_SESSION["user_no"] ;
+ $_SESSION["user_no"] ;
 
 
 include '../conn.php';
@@ -33,7 +33,7 @@ if($isValidChecksum == "TRUE") {
 	if ($_POST["STATUS"] == "TXN_SUCCESS") {
 		echo "<b>Transaction status is success</b>" . "<br/>";
 
-$sql="update sani set payment='1' where user_no= '" . $_SESSION['user_no'] . "' ";
+$sql="update sani set payment='1' where user_no= '" . $_SESSION["user_no"] . "' ";
 
 
 // echo $sql;
@@ -44,24 +44,32 @@ if ($conn->query($sql) == TRUE) {
 
 	 session_unset(); 
 	 session_destroy();
-	echo "sucees";
-	 header("location:../Thankyou.php ");
-
+	// echo "sucees";
+	// echo"<script>alert('SucessFull Payment Deliver Soon')</script>";
+	// echo "<script>window.location.href='../Thankyou.php'</script>";
 
 }
 
 else{
 
-echo  "we will fix it soon";
+echo  "We have recevied your payment but due to technical reasons it is not updating in our Database we will fix it soon. Thanks for your time";
+$conn->error;
 
 }
+
+$conn->close();
 
 
 		//Process your transaction here as success transaction.
 		//Verify amount & order id received from Payment gateway with your application's order id and amount.
 	}
+
+
 	else {
+
+
 		echo "<b>Transaction status is failure</b>" . "<br/>";
+		echo "<b>We have't recevied your Payment So please Try after some time</b>";
 	}
 
 	if (isset($_POST) && count($_POST)>0 )
@@ -78,4 +86,7 @@ else {
 	//Process transaction as suspicious.
 }
 
+
+
+echo "<script>window.location.href = '../Thankyou.php';</script>"
 ?>

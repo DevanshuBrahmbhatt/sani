@@ -13,14 +13,14 @@
  $inUserId = $_POST["collegeId"];  
  $inPassword = $_POST["password"]; 
 
-$a='123456';
-$b='admin';
+$a='emamt@2020';
+$b='delivery';
 
 		
 		if($inPassword==$a && $inUserId==$b){
 			
 	
-	header("location: manage.php"); 
+	header("location: delivery.php"); 
         }
 		
 		

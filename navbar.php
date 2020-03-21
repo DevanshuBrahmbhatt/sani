@@ -13,6 +13,19 @@
 
       <!--Let browser know website is optimized for mobile-->
       <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+      <meta charset="UTF-8">
+  <!---------SEO ------------->
+
+  <meta name="description" content="sanitizer .Vadodara. corona.corona prevention" />
+
+  <meta name="keywords" content="sanitizer .Vadodara. corona.corona prevention" />
+
+  <meta name="robots" content="index, follow" />
+  <meta name="googlebot" content="index, follow" />
+
+  <!---------SEO ------------->
+
     </head>
 
 

@@ -5,6 +5,9 @@ include_once('navbar.php');
 	blockquote {
     border-left: 5px solid #e91e63;
 }
+.text{
+	color:black;
+}
 
     </style>
 
@@ -18,13 +21,10 @@ include_once('navbar.php');
 <br>		<h4> <blockquote>Is it worth to be part of eMamta?</blockquote></h4><br>
 		<div class="text">
 		
-		<p>Just like going to a car wash, there are professional options for cleaning solar panels – your solar installer may even do it for you, for a fee.
-If you have a rooftop system, it may be a good idea to enlist a cleaning service, if only for safety reasons. Cleaning services won’t do a significantly different or better job than you can do yourself, but they are equipped to safely clean and maintain rooftop units. For ground mount units it may not be worth the service fee when you can safely and effectively clean your own panels with a hose, some dish soap, and a soft rag.<br><br>
-
-Your solar panels need to be exposed to sunlight in order to produce power. However, unless you live somewhere with high amounts of smog, dust, dirt or sand blowing around, <b>solar panel cleaning is generally not necessary.</b> In most cases, occasional rain will be enough to naturally and safely keep your solar panels clean and free of debris that could lower production.<br><br>
-It may be a good idea to freshen up your panels occasionally if you live in an area with heavy particulates in the air. Here are answers to some of the top questions solar panel system owners have about cleaning solar panels.</p>
-</div><br>
-<a   href="https://surveyheart.com/form/5e734cc571dd8e4dde5a000e" target="_blank" class="waves-effect waves-light btn-large pink center">Customer Feedback</a>
+		<p>As we all know the world is passing through a very serious situation. So as a citizen it's our duty to do something for our country and we are trying our best and we hope that we will do something together for our nation. So we welcome you if you want to join us in our mission.</p>
+		<p>If You really want to be part of e-Mamta then please fill-up the form by clicking the below button </p>
+		</div><br>
+<a   href="https://surveyheart.com/form/5e734cc571dd8e4dde5a000e" target="_blank" class="waves-effect waves-light btn-large pink center">To be part of e-Mamta</a>
 </div>
 </div><br>
 
@@ -35,16 +35,15 @@ It may be a good idea to freshen up your panels occasionally if you live in an a
 	
 		<div class="col s12 m13">
 		
-<br>		<h4> <blockquote>Is it worth to be part of eMamta as Delivery boy?</blockquote></h4><br>
+<br>		<h4> <blockquote>How to join for Delivery Service?</blockquote></h4><br>
 		<div class="text">
-		
-		<p>Just like going to a car wash, there are professional options for cleaning solar panels – your solar installer may even do it for you, for a fee.
-If you have a rooftop system, it may be a good idea to enlist a cleaning service, if only for safety reasons. Cleaning services won’t do a significantly different or better job than you can do yourself, but they are equipped to safely clean and maintain rooftop units. For ground mount units it may not be worth the service fee when you can safely and effectively clean your own panels with a hose, some dish soap, and a soft rag.<br><br>
+		<p>
+No service is bigger than helping people.we try our best to reach every house in the city but for that we need you.			
+We are giving upto 10₹/- per delivery.If you want to join then fill up this form.
 
-Your solar panels need to be exposed to sunlight in order to produce power. However, unless you live somewhere with high amounts of smog, dust, dirt or sand blowing around, <b>solar panel cleaning is generally not necessary.</b> In most cases, occasional rain will be enough to naturally and safely keep your solar panels clean and free of debris that could lower production.<br><br>
-It may be a good idea to freshen up your panels occasionally if you live in an area with heavy particulates in the air. Here are answers to some of the top questions solar panel system owners have about cleaning solar panels.</p>
+		</p>
 </div><br>
-<a   href="https://surveyheart.com/form/5e73d4f1769b09098dc46b41#welcome" target="_blank" class="waves-effect waves-light btn-large pink center">Apply for Delivery Boy</a>
+<a   href="https://surveyheart.com/form/5e73d4f1769b09098dc46b41#welcome" target="_blank" class="waves-effect waves-light btn-large pink center">Apply for Delivery</a>
 </div>
 </div><br>
 

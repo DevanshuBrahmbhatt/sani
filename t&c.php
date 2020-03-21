@@ -7,6 +7,9 @@ include_once('navbar.php');
 	blockquote {
     border-left: 5px solid #e91e63;
 }
+.text{
+	color:black;
+}
 
     </style>
 
@@ -20,12 +23,26 @@ include_once('navbar.php');
 <br>		<h4> <blockquote>Terms and Condition..</blockquote></h4><br>
 		<div class="text">
 		
-		<p>Just like going to a car wash, there are professional options for cleaning solar panels – your solar installer may even do it for you, for a fee.
-If you have a rooftop system, it may be a good idea to enlist a cleaning service, if only for safety reasons. Cleaning services won’t do a significantly different or better job than you can do yourself, but they are equipped to safely clean and maintain rooftop units. For ground mount units it may not be worth the service fee when you can safely and effectively clean your own panels with a hose, some dish soap, and a soft rag.<br><br>
+		<p>1. By submitting a form , you are accepting all terms and conditions.</p>
 
-Your solar panels need to be exposed to sunlight in order to produce power. However, unless you live somewhere with high amounts of smog, dust, dirt or sand blowing around, <b>solar panel cleaning is generally not necessary.</b> In most cases, occasional rain will be enough to naturally and safely keep your solar panels clean and free of debris that could lower production.<br><br>
-It may be a good idea to freshen up your panels occasionally if you live in an area with heavy particulates in the air. Here are answers to some of the top questions solar panel system owners have about cleaning solar panels.</p>
-</div><br>
+		<p>2. eMamta is resposible for only delivery related services.</p>
+
+		<p>3. eMamta is not engaged with any delivery boys. So if delivery boy do any mischief or any uncertain things then eMamta is not responsible.</p>
+
+		<p>4. eMmamta supports every rules and regulations regarding traffic. If delivery boy break any of the traffic rule , in that case eMamta is not responsible. Delivery boy is individually responsible for that.</p>
+
+		<p>5. If customer is not getting delivery of product within 48 hrs after complition of payment , in that case customer need to contact eMamta for further scenario.</p>
+
+		<p>6. After making payment customer can not cancle order and also can not ask for refund to eMamta.</p>
+
+		<p>7. To check wheather product or delivery boy is from eMamta or not , it will be responsibility of consumer.</p>
+
+		<p>8. In case of any crime scene , eMamta will not support(niether consumer nor delivery boy).</p>
+
+
+
+
+		</div><br>
 
 </div>
 </div><br>

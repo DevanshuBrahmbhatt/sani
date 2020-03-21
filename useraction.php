@@ -35,11 +35,17 @@ $_SESSION['user_no']=$user_no;
 
 
 
-  $sql = "insert into sani  (name,email,phoneno,address,landmark,city,noof,area,user_no)
- values('$name','$email','$phoneno','$address','$landmark','$city','$noof','$area','$user_no')";
+  $stmt =$conn->prepare( "insert into sani  (name,email,phoneno,address,landmark,city,noof,area,user_no)
+ values(?,?,?,?,?,?,?,?,?)");
+ $stmt->bind_param("ssssssiss", $name,$email,$phoneno,$address,$landmark,$city,$noof,$area,$user_no);
 
 
-  if ($conn->query($sql) == TRUE) {
+ 
+
+
+
+
+  if ($stmt->execute() == TRUE) {
 
   
 
@@ -70,7 +76,7 @@ $_SESSION['user_no']=$user_no;
    <div class="row">
 
         <div class="input-field col s6">
-		  <input placeholder="Name"  value=  ' .  $name . ' id="name" type="text" name="name" class="validate" readonly>
+		  <input placeholder="Name"  value="'.$name.'" id="name" type="text" name="name" class="validate" readonly>
 		  <label for="name"> Name</label>
        
       </div>
@@ -87,7 +93,7 @@ $_SESSION['user_no']=$user_no;
       <div class="row">
 
       <div class="input-field col s12">
-  <input placeholder="Enter Address"  value=' .  $address . '   id="address" type="text" name="address"  readonly>
+  <input placeholder="Enter Address"  value=  "  '.$address.' "  class="validate"  id="address" type="text" name="address"  readonly>
   <label for="address">Address</label>
 
   
@@ -104,7 +110,7 @@ $_SESSION['user_no']=$user_no;
       <div class="row">
 
 <div class="input-field col s12">
-<input placeholder="Enter Area" value=' .  $landmark . '  id="landmark" type="text" name="landmark" class="validate" readonly>
+<input placeholder="Enter Area" value= " ' .  $landmark . ' "  id="landmark" type="text" name="landmark" class="validate" readonly>
 <label for="landmark">landmark</label>
 
 </div>
@@ -122,12 +128,12 @@ $_SESSION['user_no']=$user_no;
       <div class="row">
 
       <div class="input-field col s6">
-          <input  value= ' .  $city . '    id="disabled"  name="city"  type="text" class="validate" readonly>
+          <input  value= "' .  $city . '"    id="disabled"  name="city"  type="text" class="validate" readonly>
           <label for="disabled">CITY</label>
         </div>
 
 <div class="input-field col s6">
-  <input placeholder="Contact_no" value=' .  $phoneno . '  id="phoneno" type="number" name="phoneno" class="validate" readonly>
+  <input placeholder="Contact_no" value= "' .  $phoneno . '" id="phoneno" type="number" name="phoneno" class="validate" readonly>
   <label for="phone">Phone_no</label>
   
 </div>
@@ -137,13 +143,13 @@ $_SESSION['user_no']=$user_no;
 
 <div class="row">
 <div class="input-field col s6">
-<input placeholder="Noof" value=' . $noof . '  id="noof"  type="number" name="noof" class="validate"  readonly>
+<input placeholder="Noof" value= "' . $noof . '"  id="noof"  type="number" name="noof" class="validate"  readonly>
 <label for="phone">No Of Sanitizer</label>
   
 </div>
 
 <div class="input-field col s6">
-<input placeholder="area" value=' .  $area . ' id="area"  type="text" name="area" class="validate" readonly>
+<input placeholder="area" value="' .  $area . '" id="area"  type="text" name="area" class="validate" readonly>
 <label for="phone">Area</label>
 </div>
 
@@ -153,7 +159,7 @@ $_SESSION['user_no']=$user_no;
 <div class="row">
 <div class="input-field col s12">
 
-<input placeholder="Amoont" value=' . $noof * 70 . '  id="amount"  type="number"  name="amount" class="validate"  readonly>
+<input placeholder="Amoont" value= "' . $noof * 50 . '"  id="amount"  type="number"  name="amount" class="validate"  readonly>
 <label for="phone">Total Amount </label>
   
 
@@ -166,7 +172,7 @@ $_SESSION['user_no']=$user_no;
 
 <div class="input-field col s6">
 
-      <input placeholder="OrderID"  id="ORDER_ID" tabindex="1"  value=' .  "ORDS" . rand(10000, 99999999) . ' maxlength="20" size="20" name="ORDER_ID" readonly>
+      <input placeholder="OrderID"  id="ORDER_ID" tabindex="1"  value="' .  "ORDS" . rand(10000, 99999999) . '" maxlength="20" size="20" name="ORDER_ID" readonly>
       
 <label class="active" for="orderid">OrderID</label>
       
@@ -176,7 +182,7 @@ $_SESSION['user_no']=$user_no;
   <div class="input-field col s6">
   
   <input title="TXN_AMOUNT" tabindex="10"
-    type="text"  value=' . $noof * 70 . ' name="TXN_AMOUNT" readonly>
+    type="text"  value="' . $noof * 50 . '" name="TXN_AMOUNT" readonly>
 
     <label for="FinalAmount">Final Amount </label>
 
@@ -232,5 +238,7 @@ $_SESSION['user_no']=$user_no;
     echo "error to create database " . $conn->error;
   }
 
+  $stmt->close();
+  
   $conn->close();
 }
