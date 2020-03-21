@@ -53,12 +53,14 @@ $_SESSION['user_no']=$user_no;
     include_once('navbar.php');
 
 
-    echo '
 
+    echo'
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <meta name="GENERATOR" content="Evrsoft First Page">
 <br>
+
+
 
 <h3 class="center">Check out page</h3>
 
@@ -219,48 +221,10 @@ $_SESSION['user_no']=$user_no;
     </form>
   </div>
 
-<script>
-
-
-
-
-function showUser(str) {
-  if (str == "") {
-      document.getElementById("txtHint").innerHTML = "";
-      return;
-  } else { 
-      if (window.XMLHttpRequest) {
-          // code for IE7+, Firefox, Chrome, Opera, Safari
-          xmlhttp = new XMLHttpRequest();
-      } else {
-          // code for IE6, IE5
-          xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
-      }
-      xmlhttp.onreadystatechange = function() {
-          if (this.readyState == 4 && this.status == 200) {
-      
-                     document.getElementById("semester").innerHTML = this.responseText;
-          }
-      };
-      xmlhttp.open("GET","setorder.php?ORDER_ID="+str,true);
-  
-      xmlhttp.send();
-  
-  
-  
-  
-  }
-}
-
-
-// document.getElementById("submit").disabled = true;
-</script>
-
 </div> 
 
 </div>
 ';
-
 
 
     echo "</html>";
@@ -274,3 +238,4 @@ function showUser(str) {
   
   $conn->close();
 }
+?>

@@ -1,5 +1,5 @@
 <?php
-
+include_once('../conn.php');
 session_start();
 
 echo $_SESSION["user_no"];
@@ -20,6 +20,16 @@ $CUST_ID = $_POST["CUST_ID"];
 $INDUSTRY_TYPE_ID = $_POST["INDUSTRY_TYPE_ID"];
 $CHANNEL_ID = $_POST["CHANNEL_ID"];
 $TXN_AMOUNT = $_POST["TXN_AMOUNT"];
+
+
+$sql1="update sani set order_id='$ORDER_ID' where user_no=".$_SESSION["user_no"]." ";
+if ($conn->query($sql1) == TRUE) {
+echo"dome";
+}
+else{
+echo $conn->error;
+}
+$conn->close();
 
 
 // Create an array having all required parameters for creating checksum.
