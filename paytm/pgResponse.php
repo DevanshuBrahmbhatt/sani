@@ -2,7 +2,11 @@
 
 session_start();
 
-echo  $_SESSION["user_no"];
+$user_no =$_GET['id'];
+
+
+// $user_no=$GET
+// echo  $_SESSION["user_no"];
 
 include '../conn.php';
 
@@ -31,7 +35,7 @@ if($isValidChecksum == "TRUE") {
 	if ($_POST["STATUS"] == "TXN_SUCCESS") {
 		echo "<b>Transaction status is success</b>" . "<br/>";
 
-$sql="update sani set payment='1' where user_no= '" . $_SESSION["user_no"] . "' ";
+$sql="update sani set payment='1' where user_no= ".$user_no." ";
 
 
 
@@ -46,6 +50,8 @@ if ($conn->query($sql) == TRUE) {
 
 	echo" <h3>Thank You So much for your awareness</h3><br>
 	<h4>It would be even better if you can give your feedback</h4><br><br> ";
+	echo "<script>window.location.href='../Thankyou.php'</script>";
+
 	
 }
 	
@@ -58,7 +64,7 @@ $conn->error;
 
 }
 
-echo "<script>window.location.href='../Thankyou.php'</script>";
+// echo "<script>window.location.href='../Thankyou.php'</script>";
 
 	}
 

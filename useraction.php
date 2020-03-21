@@ -172,7 +172,7 @@ $_SESSION['user_no']=$user_no;
 
 <div class="input-field col s6">
 
-      <input placeholder="OrderID"  id="ORDER_ID" tabindex="1"  value="' .  "ORDS" . rand(10000, 99999999) . '" maxlength="20" size="20" name="ORDER_ID" readonly>
+      <input placeholder="OrderID"  id="ORDER_ID" tabindex="1"  value="' .  "ORDS" . rand(10000, 99999999) . '" maxlength="20" onchange="showUser(this.value)"  size="20" name="ORDER_ID" readonly>
       
 <label class="active" for="orderid">OrderID</label>
       
@@ -222,6 +222,37 @@ $_SESSION['user_no']=$user_no;
 <script>
 
 
+
+
+function showUser(str) {
+  if (str == "") {
+      document.getElementById("txtHint").innerHTML = "";
+      return;
+  } else { 
+      if (window.XMLHttpRequest) {
+          // code for IE7+, Firefox, Chrome, Opera, Safari
+          xmlhttp = new XMLHttpRequest();
+      } else {
+          // code for IE6, IE5
+          xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+      }
+      xmlhttp.onreadystatechange = function() {
+          if (this.readyState == 4 && this.status == 200) {
+      
+                     document.getElementById("semester").innerHTML = this.responseText;
+          }
+      };
+      xmlhttp.open("GET","setorder.php?ORDER_ID="+str,true);
+  
+      xmlhttp.send();
+  
+  
+  
+  
+  }
+}
+
+
 // document.getElementById("submit").disabled = true;
 </script>
 
@@ -229,6 +260,7 @@ $_SESSION['user_no']=$user_no;
 
 </div>
 ';
+
 
 
     echo "</html>";

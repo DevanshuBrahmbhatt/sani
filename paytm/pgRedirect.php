@@ -29,10 +29,15 @@ $paramList["CUST_ID"] = $CUST_ID;
 $paramList["INDUSTRY_TYPE_ID"] = $INDUSTRY_TYPE_ID;
 $paramList["CHANNEL_ID"] = $CHANNEL_ID;
 $paramList["TXN_AMOUNT"] = $TXN_AMOUNT;
-$paramList["WEBSITE"] = PAYTM_MERCHANT_WEBSITE;
+$paramList["WEBSITE"] = PAYTM_MERCHANT_WEBSITE; 
 
 
-$paramList["CALLBACK_URL"] = "http://localhost/sani/paytm/pgResponse.php";
+
+
+$paramList["CALLBACK_URL"] = "http://localhost/sani/paytm/pgResponse.php?id=".$_SESSION['user_no'] ;
+
+echo $paramList["CALLBACK_URL"];
+
 $paramList["MSISDN"] = $MSISDN; //Mobile number of customer
 $paramList["EMAIL"] = $EMAIL; //Email ID of customer
 $paramList["VERIFIED_BY"] = "EMAIL"; //

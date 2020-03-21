@@ -18,9 +18,8 @@ $b='delivery';
 
 		
 		if($inPassword==$a && $inUserId==$b){
-			
-	
-	header("location: delivery.php"); 
+			 
+	header("location: delivery.php?id=".$a); 
         }
 		
 		

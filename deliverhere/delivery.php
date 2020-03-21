@@ -1,7 +1,18 @@
 <?php
+
+$b =$_GET['id'];
+
+if(isset($b)==true){
+
+
 include_once('navbar.php');
 include_once('../conn.php');
+}
 
+else{
+
+  echo "sorry next time";
+}
 
 
 $sql="select *from sani where payment=1 and delivery=0";
