@@ -1,6 +1,12 @@
 
 <?php
 include_once('navbar.php');
+include_once('conn.php');
+
+session_start();
+$conn->close();
+session_unset(); 
+session_destroy();
 ?>
 
 

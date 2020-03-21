@@ -2,8 +2,7 @@
 
 session_start();
 
- $_SESSION["user_no"] ;
-
+echo  $_SESSION["user_no"];
 
 include '../conn.php';
 
@@ -13,7 +12,6 @@ header("Cache-Control: no-cache");
 header("Expires: 0");
 
 
-// following files need to be included
 require_once("./lib/config_paytm.php");
 require_once("./lib/encdec_paytm.php");
 
@@ -36,32 +34,32 @@ if($isValidChecksum == "TRUE") {
 $sql="update sani set payment='1' where user_no= '" . $_SESSION["user_no"] . "' ";
 
 
-// echo $sql;
+
+
+while($conn->query($sql) == FALSE);
+
 
 
 if ($conn->query($sql) == TRUE) {
 
+	echo "sucees";
 
-	 session_unset(); 
-	 session_destroy();
-	// echo "sucees";
-	// echo"<script>alert('SucessFull Payment Deliver Soon')</script>";
-	// echo "<script>window.location.href='../Thankyou.php'</script>";
-
+	echo" <h3>Thank You So much for your awareness</h3><br>
+	<h4>It would be even better if you can give your feedback</h4><br><br> ";
+	
 }
+	
+
 
 else{
 
-echo  "We have recevied your payment but due to technical reasons it is not updating in our Database we will fix it soon. Thanks for your time";
+echo  "We have recevied your payment but due to technical reasons it is not updating in our Database we will fix it soon.Please take screenshot of this page. Thanks for your time";
 $conn->error;
 
 }
 
-$conn->close();
+echo "<script>window.location.href='../Thankyou.php'</script>";
 
-
-		//Process your transaction here as success transaction.
-		//Verify amount & order id received from Payment gateway with your application's order id and amount.
 	}
 
 
@@ -83,10 +81,10 @@ $conn->close();
 }
 else {
 	echo "<b>Checksum mismatched.</b>";
-	//Process transaction as suspicious.
+	
 }
 
 
 
-echo "<script>window.location.href = '../Thankyou.php';</script>"
+
 ?>
