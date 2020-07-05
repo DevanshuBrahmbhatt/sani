@@ -8,14 +8,14 @@
 */
 
 // define('PAYTM_ENVIRONMENT', 'PROD'); // PROD
-// define('PAYTM_MERCHANT_KEY', 'vdRUrLqRAIZq68Cd'); //Change this constant's value with Merchant key received from Paytm.
-// define('PAYTM_MERCHANT_MID', 'Dqogmd78159376010780'); //Change this constant's value with MID (Merchant ID) received from Paytm.
+// define('PAYTM_MERCHANT_KEY', ''); //Change this constant's value with Merchant key received from Paytm.
+// define('PAYTM_MERCHANT_MID', ''); //Change this constant's value with MID (Merchant ID) received from Paytm.
 // define('PAYTM_MERCHANT_WEBSITE', 'DEFAULT'); //Change this constant's value with Website name received from Paytm.
 
 
 define('PAYTM_ENVIRONMENT', 'TEST'); // PROD
-define('PAYTM_MERCHANT_KEY', '%2mOYq@#myM85HCh'); //Change this constant's value with Merchant key received from Paytm.
-define('PAYTM_MERCHANT_MID', 'yMYBBv98657705928958'); //Change this constant's value with MID (Merchant ID) received from Paytm.
+define('PAYTM_MERCHANT_KEY', ''); //Change this constant's value with Merchant key received from Paytm.
+define('PAYTM_MERCHANT_MID', ''); //Change this constant's value with MID (Merchant ID) received from Paytm.
 define('PAYTM_MERCHANT_WEBSITE', 'WEBSTAGING'); //Change this constant's value with Website name received from Paytm.
 
 $PAYTM_STATUS_QUERY_NEW_URL='https://securegw-stage.paytm.in/order/status';
