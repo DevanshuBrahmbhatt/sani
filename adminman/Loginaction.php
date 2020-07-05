@@ -6,6 +6,7 @@
 <?php 
  include_once("../conn.php"); 
  
+ session_start();
  
  if(isset($_POST['submit']))
 { 
@@ -15,12 +16,13 @@
 
 $a='emamta@1104';
 $b='adminman';
+$_SESSION['pass']=$a;
 
 		
 		if($inPassword==$a && $inUserId==$b){
 			
 	
-	header("location: manage.php"); 
+	header("location:manage.php"); 
         }
 		
 		

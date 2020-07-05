@@ -1,18 +1,23 @@
 <?php
 
-$b =$_GET['id'];
 
-if(isset($b)==true){
+session_start();
+if (isset($_SESSION['password']) && $_SESSION['password'] == true) {
+  
+
+} else {
+    header('Location:index.php');
+}
+
+
+
 
 
 include_once('navbar.php');
 include_once('../conn.php');
-}
 
-else{
 
-  echo "sorry next time";
-}
+
 
 
 $sql="select *from sani where payment=1 and delivery=0";

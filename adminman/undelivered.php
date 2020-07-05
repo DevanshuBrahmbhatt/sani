@@ -1,7 +1,19 @@
 <?php
+
+
+
+
+
+session_start();
+if (isset($_SESSION['pass']) && $_SESSION['pass'] == true) {
+  
+
+} else {
+    header('Location:index.php');
+}
+
 include_once('navbar.php');
 include_once('../conn.php');
-
 
 
 $sql="select *from sani where payment=1 and delivery=0";

@@ -58,11 +58,13 @@ body{
 
   
   <ul class="sidenav" id="mobile-demo">
-  <li><a href="t&c.php">T&C</a></li>
+  <li><a href="index.php">Home</a></li>
+    <li><a href="t&c.php">T&C</a></li>
   <li><a href="about.php">About Us</a></li>
   <li><a href="volunter.php">voluntary support </a></li>
   <li><a href="feedback.php">Feedback</a></li>
-        
+      
+      
 
     
     
